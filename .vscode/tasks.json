@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Attitude Indicator",
+      "type": "shell",
+      "command": "C:/MinGW/bin/g++.exe",
+      "args": [
+        "AttitudeIndicator.cpp",
+        "src/glad.c",
+        "-Iinclude",         // Include headers from include/
+        "-Llib",             // Link against .lib files in lib/
+        "-lglfw3",           // Link glfw3.lib
+        "-lopengl32",        // Link Windows OpenGL
+        "-lgdi32",           // Link GDI32 (required by OpenGL)
+        "-o", "AttitudeIndicator.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
